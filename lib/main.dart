@@ -20,11 +20,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MultiBlocProvider(
-      providers: [
-        BlocProvider(create: (context) => PostCubit()),
-        BlocProvider(create: (context) => PostCubit()),
-      ],
+    return BlocProvider(
+      create: (context) => PostCubit(),
       child: MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(
